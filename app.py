@@ -8,6 +8,7 @@ Created 12/23/2017
 
 """
 
+import os
 import requests
 import simplejson as json
 import pandas as pd
@@ -167,5 +168,6 @@ def plot_into_bokeh(ticker_df, options):
 
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))    
+    app.run(host='0.0.0.0', port=port)
 
