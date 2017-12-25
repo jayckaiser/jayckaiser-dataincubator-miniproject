@@ -7,25 +7,42 @@
     <meta name="author" content="@gotoariel">
     <!-- <link rel="icon" href="favicon.ico"> -->
 
-    <title>Wilkommen, bienvenue, and welcome to Heroku!</title>
+    <title>Jay Kaiser's 12 Day Mini Project</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./static", filename='style.css'">
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-left">
-          <h2>Hello, World!</h2>
-          <ul>
-            <li><a target="_blank" href="https://www.heroku.com/">Heroku</a></li>
-            <li><a target="_blank" href="http://flask.pocoo.org/">Flask</a></li>
-            <li><a target="_blank" href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a></li>
-            <li><a target="_blank" href="http://getbootstrap.com/">Bootstrap</a></li>
-          </ul>
-        </div>
-      </div>
+    <div class="metanav">
+      <h3>Enter a ticker and see last month's stock info. </h3>
+      <h4>(Any unknown stock tickers will default to 'A'.) </h4>
+
+
+
+	<form id='entryinfo' method='post' action='index' >
+	   <p>
+	   Ticker symbol: <input type='text' name='name_info' />
+	   </p>
+
+              <h4>Leave all checkboxes blank to graph all options. </h4>
+	      <input type="checkbox" name="option" value="close"> Closing price<br>
+	      <input type="checkbox" name="option" value="open"> Opening price<br>
+	      <input type="checkbox" name="option" value="high"> High price<br>
+	      <input type="checkbox" name="option" value="low"> Low price<br>
+	      <input type="checkbox" name="option" value="adj_close"> Adjusted closing price<br>
+	      <input type="checkbox" name="option" value="adj_open"> Adjusted opening price<br>
+	      <input type="checkbox" name="option" value="adj_high"> Adjusted high price<br>
+	      <input type="checkbox" name="option" value="adj_low"> Adjusted low price<br><br><br>
+
+              <input type="checkbox" name="all_data" value="all_values"> Check if you  want to see all data (not just last month's).<br>
+	   <p>
+	   <input type='submit' value='Submit' />
+	   </p>
+	</form>
     </div>
+
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -33,3 +50,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
+
